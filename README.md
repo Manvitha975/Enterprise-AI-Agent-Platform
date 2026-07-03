@@ -264,7 +264,7 @@ Indian Institute of Technology Madras
 
 GitHub: https://github.com/Manvitha975
 
-LinkedIn: https://linkedin.com/in/manvitha-ankam
+LinkedIn: https://www.linkedin.com/in/manvitha-ankam-250897375/
 
 ---
 
