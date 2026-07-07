@@ -259,7 +259,7 @@ Feel free to fork the repository and submit a pull request.
 
 **Manvitha Ankam**
 
-Dual Degree (B.Tech + M.Tech)  
+Dual Degree (B.Tech + M.Tech)  in Aerospace Engineering 
 Indian Institute of Technology Madras
 
 GitHub: https://github.com/Manvitha975
