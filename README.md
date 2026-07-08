@@ -1,4 +1,4 @@
-# 🤖 Enterprise AI Agent Platform# 🤖 AgentOS
+# 🤖 AgentOS
 
 An Enterprise Multi-Agent AI Operating System
 
