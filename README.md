@@ -1,4 +1,8 @@
-# 🤖 Enterprise AI Agent Platform
+# 🤖 Enterprise AI Agent Platform# 🤖 AgentOS
+
+An Enterprise Multi-Agent AI Operating System
+
+Built using FastAPI, LangGraph, Gemini, RAG, Docker and AWS.
 
 > A production-ready multi-agent AI platform that automates research, document intelligence, code generation, and report creation using collaborative AI agents.
 
