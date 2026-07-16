@@ -24,19 +24,15 @@ The project demonstrates modern AI application development using production-grad
 
 ---
 
-# 🚀 Key Features
+# 🚀 Current Features
 
-- 🤖 Multi-Agent Workflow
-- 📄 Document Intelligence (PDF, DOCX, TXT)
-- 🔍 Retrieval-Augmented Generation (RAG)
-- 🧠 AI Research Assistant
-- 💻 AI Code Generation
-- 📝 Automated Report Generation
-- 💬 Conversational Chat Interface
-- 📊 Real-Time Workflow Dashboard
-- 🐳 Dockerized Deployment
-- ☁️ Cloud Deployment on AWS EC2
-
+- 🤖 AI Research Agent powered by Google Gemini
+- 🌐 AI Web Search Agent powered by Tavily
+- 📄 AI Document Summarization (PDF Upload)
+- 🧠 Planner Agent for intelligent request routing
+- ⚡ FastAPI REST API with modular architecture
+- 🔒 Environment variable management using `.env`
+- 📚 Interactive Swagger API documentation
 ---
 
 # 🏗️ System Architecture
