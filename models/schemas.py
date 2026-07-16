@@ -12,3 +12,8 @@ class ResearchResponse(BaseModel):
     agent: str
     question: str
     answer: str
+
+class DocumentResponse(BaseModel):
+    status: str
+    agent: str
+    summary: str

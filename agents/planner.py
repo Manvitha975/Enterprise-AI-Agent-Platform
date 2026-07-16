@@ -1,6 +1,6 @@
 from agents.researcher import research_agent
 from agents.web_search import web_search_agent
-from agents.document_agent import document_agent
+
 
 from services.gemini_service import ask_gemini
 
@@ -69,7 +69,10 @@ User Request:
         return web_search_agent(question)
 
     elif "Document" in decision:
-        return document_agent(question)
+        return (
+            "Please upload your PDF using "
+            "POST /document/summarize."
+        )
 
     else:
         return research_agent(question)

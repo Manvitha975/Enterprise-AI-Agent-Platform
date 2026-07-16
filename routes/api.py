@@ -1,15 +1,32 @@
-from fastapi import APIRouter, HTTPException
-
-from models.schemas import (
-    ResearchRequest,
-    ResearchResponse
+from fastapi import (
+    APIRouter,
+    HTTPException,
+    UploadFile,
+    File
 )
 
+import tempfile
+import shutil
+
+# ==========================
+# Schemas
+# ==========================
+from models.schemas import (
+    ResearchRequest,
+    ResearchResponse,
+    DocumentResponse
+)
+
+# ==========================
+# Agents
+# ==========================
 from agents.planner import planner_agent
+from agents.document_agent import summarize_pdf
 
-# Initialize API Router
+# ==========================
+# Router
+# ==========================
 router = APIRouter()
-
 
 # ==========================
 # Home
@@ -193,4 +210,50 @@ def research(request: ResearchRequest):
         raise HTTPException(
             status_code=500,
             detail="Unable to generate response from Research Agent."
+        )
+    
+@router.post(
+    "/document/summarize",
+    response_model=DocumentResponse,
+    tags=["AI Agents"],
+    summary="Summarize a PDF document"
+)
+async def summarize_document(
+    pdf: UploadFile = File(...)
+):
+
+    # Validate file type
+    if not pdf.filename.endswith(".pdf"):
+        raise HTTPException(
+            status_code=400,
+            detail="Only PDF files are supported."
+        )
+
+    # Create temporary file
+    with tempfile.NamedTemporaryFile(
+        delete=False,
+        suffix=".pdf"
+    ) as temp_pdf:
+
+        shutil.copyfileobj(pdf.file, temp_pdf)
+
+        temp_path = temp_pdf.name
+
+    try:
+
+        summary = summarize_pdf(temp_path)
+
+        return DocumentResponse(
+            status="success",
+            agent="Document Agent",
+            summary=summary
+        )
+
+    except Exception as e:
+
+        print("Document Agent Error:", e)
+
+        raise HTTPException(
+            status_code=500,
+            detail="Unable to summarize PDF."
         )
