@@ -30,10 +30,22 @@ The project demonstrates modern AI application development using production-grad
 - 🌐 AI Web Search Agent powered by Tavily
 - 📄 AI Document Summarization (PDF Upload)
 - 🧠 Planner Agent for intelligent request routing
+- 🧩 Text Chunking Engine for RAG
+- 🔢 Semantic Embeddings using Sentence Transformers
+- 🗂️ FAISS Vector Database
+- 🔍 Semantic Similarity Search
 - ⚡ FastAPI REST API with modular architecture
-- 🔒 Environment variable management using `.env`
-- 📚 Interactive Swagger API documentation
----
+- 📚 Interactive Swagger API Documentation
+
+# 🚧 Roadmap
+
+- 💬 Chat with PDFs (Full RAG Integration)
+- 💻 AI Code Generation Agent
+- 📝 AI Report Generation Agent
+- 🧠 Conversation Memory
+- 🔐 JWT Authentication
+- 🐳 Docker Deployment
+- ☁️ AWS EC2 Deployment
 
 # 🏗️ System Architecture
 
